@@ -3,4 +3,15 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
-components
+components/app_hap_setup_payload
+components/app_wifi
+components/button
+components/esp_hap_apple_profiles
+components/esp_hap_core
+components/esp_hap_extras
+components/esp_hap_platform
+components/hkdf-sha
+components/json_generator
+components/json_parser
+components/mu_srp
+components/qrcode
