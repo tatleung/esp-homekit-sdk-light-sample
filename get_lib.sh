@@ -1,9 +1,9 @@
 #!/bin/bash
 
-mkdir -p components
+# mkdir -p components
 
-git clone --recurse-submodules https://github.com/espressif/esp-aws-iot.git components/esp-aws-iot
-git clone --recurse-submodules https://github.com/espressif/esp-homekit-sdk.git components/esp-homekit-sdk
+# git clone --recurse-submodules https://github.com/espressif/esp-aws-iot.git components/esp-aws-iot
+# git clone --recurse-submodules https://github.com/espressif/esp-homekit-sdk.git components/esp-homekit-sdk
 
 git submodule update --init --recursive
 cp -r components/esp-homekit-sdk/components/button components

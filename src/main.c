@@ -43,8 +43,8 @@
 
 #include "lightbulb.h"
 
-/* 
- * Comment out the below line to disable Firmware Upgrades 
+/*
+ * Comment out the below line to disable Firmware Upgrades
  */
 #define CONFIG_FIRMWARE_SERVICE
 
@@ -54,19 +54,19 @@ static const char* TAG = "HAP lightbulb";
 #define LIGHTBULB_TASK_STACKSIZE 4 * 1024
 #define LIGHTBULB_TASK_NAME "hap_lightbulb"
 
-/* 
+/*
  *Reset network credentials if button is pressed for more than 3 seconds and
- * then released 
+ * then released
  */
 #define RESET_NETWORK_BUTTON_TIMEOUT 3
 
-/* 
- * Reset to factory if button is pressed and held for more than 10 seconds 
+/*
+ * Reset to factory if button is pressed and held for more than 10 seconds
  */
 #define RESET_TO_FACTORY_BUTTON_TIMEOUT 10
 
-/* 
- * The button "Boot" will be used as the Reset button for the example 
+/*
+ * The button "Boot" will be used as the Reset button for the example
  */
 #define RESET_GPIO GPIO_NUM_0
 
@@ -168,10 +168,8 @@ static void lightbulb_thread_entry(void* arg) {
   // Initialize the HAP core
   hap_init(HAP_TRANSPORT_WIFI);
 
-  /*
-   * Initialise the mandatory parameters for Accessory which will be added as
-   * the mandatory services internally
-   */
+  // Initialise the mandatory parameters for Accessory which will be added as
+  // the mandatory services internally
   hap_acc_cfg_t cfg = {
       .name = "Esp-Light",
       .manufacturer = "Espressif",
@@ -260,7 +258,6 @@ static void lightbulb_thread_entry(void* arg) {
 //
 // However, for testing purpose, this can be overridden by using
 // hap_set_setup_code() and hap_set_setup_id() APIs, as has been done here.
-//
 #ifdef CONFIG_EXAMPLE_USE_HARDCODED_SETUP_CODE
   // Unique Setup code of the format xxx-xx-xxx. Default: 111-22-333
   hap_set_setup_code(CONFIG_EXAMPLE_SETUP_CODE);
